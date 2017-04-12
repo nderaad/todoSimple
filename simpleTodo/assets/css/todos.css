@@ -15,16 +15,6 @@ h1  {
   font-weight: normal;
 }
 
-.fa-chevron-up {
-  float: right;
-  display: 100%;
-}
-
-.fa-chevron-down {
-  display:none;
-  float: right;
-}
-
 input {
   font-size: 18px;
   color: #2980b9;
@@ -32,6 +22,9 @@ input {
   width: 100%;
   padding: 13px 13px 13px 20px;
   box-sizing: border-box;
+  height: 40px;
+  border: 3px solid rgba(0, 0, 0, 0);
+
 }
 
 input:focus {
@@ -54,7 +47,6 @@ li {
 	height: 45px;
 	line-height: 45px;
 	color: #666;
-  /*padding: 10px 20px;*/
   font-size: 16px;
 }
 
@@ -63,33 +55,41 @@ li:nth-child(2n) {
   background: #f7f7f7;
 }
 
-#container {
-  width: 360px;
-  margin: 100px auto;
-  box-shadow: 0 0 3px rgba(0,0,0,0.1);
-  background: #f7f7f7;
+li:hover .del {
+	width: 45px;
+	opacity: 1.0;
 }
 
-span {
+.fa-chevron-up {
+  float: right;
+  display: 100%;
+}
+
+.fa-chevron-down {
+  display:none;
+  float: right;
+}
+
+.del {
   background: #e74c3c;
   height: 45px;
   margin-right: 20px;
   text-align: center;
   color: white;
-  width: 45px;
+  width: 0;
   display: inline-block;
-  transition: 0.2s linear;
+  transition: 0.3s linear;
   opacity: 0;
 }
-
-li:hover span {
-	width: 40px;
-	opacity: 1.0;
-}
-
-
 
 .completed {
   color: gray;
   text-decoration: line-through;
+}
+
+#container {
+  width: 360px;
+  margin: 100px auto;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  background: #f7f7f7;
 }

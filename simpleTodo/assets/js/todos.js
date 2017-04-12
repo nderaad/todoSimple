@@ -1,12 +1,7 @@
 $( document ).ready(function() {
   $(".fa-chevron-up").on('click', function() {
-    $(this).toggleClass('fa-chevron-up');
     $(this).toggleClass('fa-chevron-down');
-  });
-
-  $(".fa-chevron-down").on('click', function() {
-    $(this).toggleClass('fa-chevron-down');
-    $(this).toggleClass('fa-chevron-up');
+    $("input[type='text']").fadeToggle();
   });
 
   //Check off specific to-dos by clicking
@@ -32,7 +27,9 @@ $( document ).ready(function() {
       var todoText = $(this).val();
       $(this).val("");
       //create new li and add to ul
-      $("ul").append('<li><span class=\"del\"><i class="fa fa-trash"></i> </span>' + todoText + '</li>');
+      $("ul").append('<li><span class=\"del\"><i class="fa fa-trash"></i></span>' + " " + todoText + '</li>');
     }
   });
+
+
 });
